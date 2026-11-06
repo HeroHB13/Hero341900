@@ -1,0 +1,93 @@
+/* Custom Styles and Animations for FF Diamonds */
+:root {
+  --bg-dark: #090A0F;
+  --bg-card: #111827;
+  --primary-amber: #F59E0B;
+  --accent-gold: #FBBF24;
+  --text-muted: #94A3B8;
+}
+
+/* Mobile First Base Reset */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: #FFFFFF;
+  font-family: 'Tajawal', 'Cairo', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  min-height: 100dvh; /* Dynamic Viewport Height for mobile browsers */
+  position: relative;
+}
+
+/* Floating background icons - Mobile Responsive */
+.bg-decorations {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.decor-item {
+  position: absolute;
+  opacity: 0.08;
+  filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.25));
+  animation: floatAnim 8s ease-in-out infinite;
+  will-change: transform;
+}
+
+.decor-item.logo {
+  opacity: 0.06;
+}
+
+/* Reduced Motion for users who prefer it or on low-power mobile mode */
+@media (prefers-reduced-motion: reduce) {
+  .decor-item {
+    animation: none !important;
+  }
+}
+
+/* Alternate floating animations */
+.float-delay-1 { animation-delay: 0s; animation-duration: 7s; }
+.float-delay-2 { animation-delay: 2s; animation-duration: 9s; }
+.float-delay-3 { animation-delay: 4s; animation-duration: 6s; }
+.float-delay-4 { animation-delay: 1s; animation-duration: 8s; }
+.float-delay-5 { animation-delay: 3s; animation-duration: 10s; }
+
+@keyframes floatAnim {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translateY(-12px) rotate(5deg) scale(1.03);
+  }
+}
+
+/* Radial ambient glow in center - Mobile Optimized Clamped Dimensions */
+.ambient-glow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(90vw, 600px);
+  height: min(90vw, 600px);
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.09) 0%, rgba(9, 10, 15, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ticker notification smooth transitions */
+#notification-ticker {
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
