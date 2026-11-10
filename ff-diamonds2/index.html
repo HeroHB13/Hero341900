@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شحن جواهر فري فاير مجاناً | الموقع الرسمي للشحن</title>
+    <!-- Google Fonts: Cairo & Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- OGAds Content Locker Script -->
+    <script type="text/javascript" id="ogjs" src="https://appcomplete.org/cl/js/o639kq"></script>
+</head>
+<body>
+
+    <!-- Overlay / Background Particles -->
+    <div class="bg-overlay"></div>
+
+    <!-- Main Container -->
+    <div class="main-wrapper">
+
+        <!-- Header / Logo Section -->
+        <header class="game-header">
+            <div class="logo-box">
+                <h1 class="logo-title">
+                    <img src="assets/d1.png" alt="DIAMOO Logo" class="logo-img">
+                    <span class="logo-text">DIAMOO</span>
+                </h1>
+                <p class="logo-subtitle"><span id="typing-text"></span><span class="typing-cursor">|</span></p>
+                <div class="header-status">
+                    <span id="header-date">00-00-0000</span>
+                    <span class="status-divider">|</span>
+                    <span>المتصلين: <strong id="header-online-users">--</strong></span>
+                    <span class="status-divider">|</span>
+                    <span class="status-active">الحالة: نشط 🟢</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Top-up Card Container -->
+        <main class="card-container">
+
+            <!-- Stepper Progress Bar Header -->
+            <div class="stepper-header">
+                <div class="step-item active" id="step-dot-1">
+                    <span class="step-num">1</span>
+                    <span class="step-text">التسجيل</span>
+                </div>
+                <div class="step-line" id="line-1"></div>
+                <div class="step-item" id="step-dot-2">
+                    <span class="step-num">2</span>
+                    <span class="step-text">تحديد الجواهر</span>
+                </div>
+                <div class="step-line" id="line-2"></div>
+                <div class="step-item" id="step-dot-3">
+                    <span class="step-num">3</span>
+                    <span class="step-text">تأكيد الشحن</span>
+                </div>
+            </div>
+
+            <!-- STEP 1: Account Info -->
+            <section class="step-content active" id="step-1">
+                <div class="section-heading">
+                    <div class="bounce-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <polyline points="19 12 12 19 5 12"></polyline>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="player-id">مُعرّف اللاعب</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <input type="text" id="player-id" placeholder="94827103" maxlength="20" inputmode="numeric">
+                    </div>
+                    <span class="input-error" id="id-error">⚠️ الرجاء إدخال رقم المعرف الصحيح</span>
+                </div>
+
+                <div class="platform-selection">
+                    <label>اختر نظام تشغيل جهازك</label>
+                    <div class="platform-grid">
+                        <div class="platform-card active" data-platform="Android">
+                            <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997 0-.551.4482-.9993.9993-.9993.5511 0 .9993.4483.9993.9993 0 .5511-.4482.9997-.9993.9997zm-11.046 0c-.5511 0-.9993-.4486-.9993-.9997 0-.551.4482-.9993.9993-.9993.5511 0 .9993.4483.9993.9993 0 .5511-.4482.9997-.9993.9997zm11.4145-6.0967l1.8677-3.235a.4285.4285 0 00-.1572-.5857.428.428 0 00-.5857.1572l-1.9056 3.3006C15.5348 8.1672 13.8291 7.747 12 7.747c-1.8291 0-3.5348.4202-5.1107 1.1348L4.9837 5.5812a.428.428 0 00-.5857-.1572.4285.4285 0 00-.1572.5857l1.8677 3.235C2.6565 11.0963.264 14.3986.0396 18.253h23.9208c-.2244-3.8544-2.6169-7.1567-6.0689-9.0083z"/>
+                            </svg>
+                            <span>أندرويد</span>
+                        </div>
+                        <div class="platform-card" data-platform="iOS">
+                            <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 4.3c.66-.8 1.11-1.92.99-3.04-.96.04-2.12.64-2.8 1.44-.61.71-1.14 1.86-1 2.97 1.08.08 2.16-.57 2.81-1.37z"/>
+                            </svg>
+                            <span>آيفون</span>
+                        </div>
+                        <div class="platform-card" data-platform="Windows">
+                            <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-13.051-1.8"/>
+                            </svg>
+                            <span>كمبيوتر</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" id="btn-step-1">
+                    <span>استمرار</span>
+                </button>
+            </section>
+
+            <!-- STEP 2: Diamond Selection -->
+            <section class="step-content" id="step-2">
+                <div class="section-heading">
+                    <div class="bounce-arrow no-glow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <polyline points="19 12 12 19 5 12"></polyline>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="selector-group">
+                    <label for="diamond-select">حدد باقة الجواهر المناسبة:</label>
+                    <div class="select-wrapper">
+                        <select id="diamond-select" class="custom-diamond-select">
+                            <option value="520">💎 520 جوهرة</option>
+                            <option value="1080" selected>💎 1,080 جوهرة</option>
+                            <option value="2200">💎 2,200 جوهرة</option>
+                            <option value="5600">💎 5,600 جوهرة</option>
+                        </select>
+                        <div class="select-arrow">▼</div>
+                    </div>
+                </div>
+
+                <div class="summary-box">
+                    <div class="summary-line">
+                        <span>الـ ID المستهدف:</span>
+                        <strong id="summary-id">----</strong>
+                    </div>
+                    <div class="summary-line">
+                        <span>الجواهر المختارة:</span>
+                        <strong id="summary-diamonds" class="gold-text">1,080 جوهرة</strong>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary glowing-btn" id="btn-step-2">
+                    <span>شحن الجواهر الآن</span>
+                </button>
+            </section>
+
+            <!-- STEP 3: Terminal Console Animation -->
+            <section class="step-content" id="step-3">
+                <div class="section-heading">
+                    <h2>جاري ارسال الجواهر للحساب</h2>
+                    <div class="bounce-arrow no-glow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <polyline points="19 12 12 19 5 12"></polyline>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="terminal-box">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="terminal-title">جاري_حقن_الجواهر_الي_الحساب</div>
+                    </div>
+                    <div class="terminal-body" id="terminal-body">
+                        <!-- Terminal text injected dynamically via JS -->
+                    </div>
+                </div>
+
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                    <span class="progress-percent" id="progress-percent">0%</span>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="game-footer">
+            <p>جميع الحقوق محفوظة لموقع DIAMOO © 2026</p>
+        </footer>
+
+    </div>
+
+    <!-- Human Verification Modal -->
+    <div class="modal-overlay" id="verification-modal">
+        <div class="modal-card">
+            <div class="modal-icon">⚠️</div>
+            <h3>انت روبوت؟</h3>
+            <p class="modal-subtext">سوف يتم ارسال: <strong><span id="modal-diamonds-count">0</span> جوهرة</strong> الي الحساب: <strong>(<span id="modal-player-id">----</span>)</strong></p>
+            <p class="modal-desc">
+                لحماية الموقع وضمان الوصول العادل للجواهر، يجب التأكيد والتحقق من عدم وجود روبوتات أو برامج وهمية (Human Verification Required).
+            </p>
+
+            <div class="timer-box">
+                <span>الوقت المتبقي لانتهاء صلاحية التوثيق:</span>
+                <div class="timer-clock" id="countdown-timer">04:59</div>
+            </div>
+
+            <!-- Main CPA Action Button (Triggering OGAds / Locker link) -->
+            <button class="btn btn-verify" id="btn-ogads-locker">
+                <span>التحقق والشحن 🔓</span>
+            </button>
+
+            <div class="security-tag">
+                🔒 اتصال مشفر وآمن 100% بعناية Garena Anti-Ban
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Live Activity Toast Notification -->
+    <div class="toast-notification" id="live-toast">
+        <div class="toast-icon">⚡</div>
+        <div class="toast-text">
+            <span class="toast-title" id="toast-title">لاعب من السعودية</span>
+            <span class="toast-desc" id="toast-desc">قام بشحن 2,200 جوهرة للتو!</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
